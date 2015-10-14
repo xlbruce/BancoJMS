@@ -1,0 +1,125 @@
+[08/10/2015 22:12:44] Cliente 1010 logado
+[08/10/2015 23:35:40] Cliente 1010 logado
+[08/10/2015 23:43:31] Cliente 1010 logado
+[08/10/2015 23:47:05] Cliente 1010 logado
+[08/10/2015 23:52:21] Cliente 1010 logado
+[08/10/2015 23:55:43] Cliente 1010 logado
+[08/10/2015 23:55:49] Cliente 1010 logado
+[08/10/2015 23:57:05] Cliente 1010 logado
+[13/10/2015 19:02:24] Cliente 1010 logado
+[13/10/2015 19:02:26] Cliente null consultou o saldo
+[13/10/2015 19:05:47] Cliente 1010 logado
+[13/10/2015 19:06:15] Cliente 1010 logado
+[13/10/2015 19:06:29] Cliente null consultou o saldo
+[13/10/2015 19:15:13] Cliente 1010 logado
+[13/10/2015 19:15:15] Cliente null consultou o saldo
+[13/10/2015 19:15:47] Cliente null consultou o saldo
+[13/10/2015 19:21:13] Cliente 1010 logado
+[13/10/2015 19:21:26] Cliente null consultou o saldo
+[13/10/2015 19:23:01] Cliente 1010 logado
+[13/10/2015 19:23:24] Cliente null consultou o saldo
+[13/10/2015 19:25:39] Cliente 1010 logado
+[13/10/2015 19:25:41] Cliente null consultou o saldo
+[13/10/2015 19:26:13] Cliente null consultou o saldo
+[13/10/2015 19:26:34] Cliente null consultou o saldo
+[13/10/2015 19:26:36] Cliente null consultou o saldo
+[13/10/2015 19:26:36] Cliente null consultou o saldo
+[13/10/2015 19:26:37] Cliente null consultou o saldo
+[13/10/2015 19:26:41] Cliente null consultou o saldo
+[13/10/2015 19:26:43] Cliente null consultou o saldo
+[13/10/2015 19:26:51] Cliente null consultou o saldo
+[13/10/2015 19:26:55] Cliente null consultou o saldo
+[13/10/2015 19:27:48] Cliente 1010 logado
+[13/10/2015 19:27:59] Cliente null consultou o saldo
+[13/10/2015 19:30:28] Cliente 1010 logado
+[13/10/2015 19:30:39] Cliente 1010 logado
+[13/10/2015 19:31:03] Cliente null consultou o saldo
+[13/10/2015 19:31:35] Cliente 1010 logado
+[13/10/2015 19:31:43] Cliente null consultou o saldo
+[13/10/2015 19:33:09] Cliente 1010 logado
+[13/10/2015 19:33:10] Cliente null consultou o saldo
+[13/10/2015 19:40:29] Cliente 1010 logado
+[13/10/2015 19:40:42] Cliente 1010 consultou o saldo
+[13/10/2015 19:41:48] Cliente 1010 logado
+[13/10/2015 19:41:49] Cliente 1010 consultou o saldo
+[13/10/2015 19:43:20] Cliente 1010 consultou o saldo
+[13/10/2015 19:44:21] Cliente 1010 consultou o saldo
+[13/10/2015 19:49:24] Cliente 1010 logado
+[13/10/2015 19:50:06] Cliente 1010 logado
+[13/10/2015 19:50:16] Cliente 1010 logado
+[13/10/2015 19:50:30] Cliente 1010 consultou o saldo
+[13/10/2015 19:51:44] Cliente 1010 fez logoff
+[13/10/2015 19:51:55] Cliente 1010 logado
+[13/10/2015 19:52:06] Cliente 1010 logado
+[13/10/2015 19:52:43] Cliente 1010 logado
+[13/10/2015 19:54:02] Cliente 1010 fez logoff
+[13/10/2015 19:54:06] Cliente 1010 logado
+[13/10/2015 19:55:28] Cliente 1010 logado
+[13/10/2015 19:55:47] Cliente 1010 fez logoff
+[13/10/2015 20:01:19] Cliente 1010 logado
+[13/10/2015 20:01:22] Cliente 1010 fez logoff
+[13/10/2015 20:01:27] Cliente 1010 logado
+[13/10/2015 20:01:31] Cliente 1010 fez logoff
+[13/10/2015 20:01:33] Cliente 1010 logado
+[13/10/2015 20:01:35] Cliente 1010 consultou o saldo
+[13/10/2015 20:14:37] Cliente 1010 logado
+[13/10/2015 20:14:49] Cliente 1010 sacou R$500
+[13/10/2015 20:14:58] Cliente 1010 consultou o saldo
+[13/10/2015 20:15:59] Cliente 1010 sacou R$1
+[13/10/2015 20:16:12] Cliente 1010 consultou o saldo
+[13/10/2015 20:16:37] Cliente 1010 sacou R$1
+[13/10/2015 20:17:38] Cliente 1010 sacou R$-10000
+[13/10/2015 20:17:40] Cliente 1010 consultou o saldo
+[13/10/2015 20:36:52] Cliente 1011 logado
+[13/10/2015 20:36:56] Cliente 1011 consultou o saldo
+[13/10/2015 20:37:04] Cliente 1011 sacou R$750
+[13/10/2015 20:37:06] Cliente 1011 consultou o saldo
+[13/10/2015 20:37:27] Cliente 1011 sacou R$-2000
+[13/10/2015 20:37:28] Cliente 1011 consultou o saldo
+[13/10/2015 20:37:37] Cliente 1011 consultou o saldo
+[13/10/2015 20:38:08] Cliente 1011 consultou o saldo
+[13/10/2015 22:06:33] Cliente 1010 logado
+[13/10/2015 22:06:35] Cliente 1010 consultou o saldo
+[13/10/2015 22:06:38] Cliente 1010 fez logoff
+[13/10/2015 22:07:15] Cliente 1010 logado
+[13/10/2015 22:07:30] Cliente 1010 consultou o saldo
+[13/10/2015 22:07:46] Cliente 1010 sacou R$500
+[13/10/2015 22:08:12] Cliente 1011 logado
+[13/10/2015 22:25:53] Cliente 1010 logado
+[13/10/2015 22:25:54] Cliente 1010 consultou o saldo
+[13/10/2015 22:27:55] Cliente 1010 fez logoff
+[13/10/2015 22:28:05] Cliente 1010 logado
+[13/10/2015 22:28:07] Cliente 1010 consultou o saldo
+[13/10/2015 22:28:22] Cliente 1010 consultou o saldo
+[13/10/2015 22:29:01] Cliente 1010 logado
+[13/10/2015 22:29:03] Cliente 1010 consultou o saldo
+[13/10/2015 22:29:08] Cliente 1010 sacou R$10
+[13/10/2015 22:29:17] Cliente 1010 tentou sacar R$90000
+[13/10/2015 22:29:21] Cliente 1010 consultou o saldo
+[13/10/2015 22:30:08] Cliente 1012 logado
+[13/10/2015 22:30:10] Cliente 1012 consultou o saldo
+[13/10/2015 22:37:14] Cliente 1012 consultou o saldo
+[13/10/2015 22:37:24] Cliente 1012 consultou o saldo
+[13/10/2015 22:37:42] Cliente 1012 sacou R$0
+[13/10/2015 22:38:20] Cliente 1010 logado
+[13/10/2015 22:41:12] Cliente 1010 logado
+[13/10/2015 22:41:47] Cliente 1010 logado
+[13/10/2015 22:43:28] Cliente 1010 logado
+[13/10/2015 22:43:30] Cliente 1010 fez logoff
+[13/10/2015 22:43:31] Cliente 1010 logado
+[13/10/2015 22:45:28] Cliente 1010 logado
+[13/10/2015 22:51:56] Tentativa de login com a conta1012
+[13/10/2015 22:52:00] Tentativa de login com a conta1010
+[13/10/2015 22:52:30] Tentativa de login com a conta 1010
+[13/10/2015 22:52:36] Tentativa de login com a conta 1010
+[13/10/2015 22:52:43] Cliente 1010 logado
+[13/10/2015 22:53:16] Cliente 1010 consultou o saldo
+[13/10/2015 22:53:29] Cliente 1010 transferiu R$ 0,00para a conta 1012
+[13/10/2015 22:53:40] Cliente 1010 consultou o saldo
+[13/10/2015 22:54:56] Cliente 1010 sacou R$-1000
+[13/10/2015 22:55:00] Cliente 1010 consultou o saldo
+[13/10/2015 22:55:07] Cliente 1010 transferiu R$ 1.000,00para a conta 1011
+[13/10/2015 22:55:36] Cliente 1010 consultou o saldo
+[13/10/2015 22:55:52] Cliente 1010 consultou o saldo
+[13/10/2015 22:59:03] Cliente 1010 consultou o saldo
+[13/10/2015 22:59:09] Cliente 1010 tentou transferir R$ 1.000,00 para a conta1011

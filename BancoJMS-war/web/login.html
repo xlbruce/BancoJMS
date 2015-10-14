@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bem-vindo(a) ao Banco JMS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="FrontController" method="POST">
+            <table>
+                <tr><td>Número da conta:</td><td><input type="number" name="nro_conta"/></td></tr>
+                <tr><td>Senha: </td><td><input type="password" name="senha"/></td></tr>
+            </table>
+            <input type="hidden" name="command" value="LoginCommand"/>
+            <input type="submit" value="Login"/>
+        </form>
+    </body>
+</html>

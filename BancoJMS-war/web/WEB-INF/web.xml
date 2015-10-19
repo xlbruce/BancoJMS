@@ -41,34 +41,5 @@
         <local>com.br.banco.log.LogProducerLocal</local>
         <ejb-link>BancoJMS-ejb.jar#LogProducer</ejb-link>
     </ejb-local-ref>
-    <ejb-local-ref>
-        <ejb-ref-name>LogProducer1</ejb-ref-name>
-        <ejb-ref-type>Session</ejb-ref-type>
-        <local>com.br.banco.log.LogProducerLocal</local>
-        <ejb-link>BancoJMS-ejb.jar#LogProducer</ejb-link>
-    </ejb-local-ref>
-    <ejb-local-ref>
-        <ejb-ref-name>LogProducer2</ejb-ref-name>
-        <ejb-ref-type>Session</ejb-ref-type>
-        <local>com.br.banco.log.LogProducerLocal</local>
-        <ejb-link>BancoJMS-ejb.jar#LogProducer</ejb-link>
-    </ejb-local-ref>
-    <ejb-local-ref>
-        <ejb-ref-name>LogProducer3</ejb-ref-name>
-        <ejb-ref-type>Session</ejb-ref-type>
-        <local>com.br.banco.log.LogProducerLocal</local>
-        <ejb-link>BancoJMS-ejb.jar#LogProducer</ejb-link>
-    </ejb-local-ref>
-    <ejb-local-ref>
-        <ejb-ref-name>SessionManager1</ejb-ref-name>
-        <ejb-ref-type>Session</ejb-ref-type>
-        <local>com.br.banco.sessionbeans.SessionManagerLocal</local>
-        <ejb-link>BancoJMS-ejb.jar#SessionManager</ejb-link>
-    </ejb-local-ref>
-    <ejb-local-ref>
-        <ejb-ref-name>SessionManager2</ejb-ref-name>
-        <ejb-ref-type>Session</ejb-ref-type>
-        <local>com.br.banco.sessionbeans.SessionManagerLocal</local>
-        <ejb-link>BancoJMS-ejb.jar#SessionManager</ejb-link>
-    </ejb-local-ref>
+    
 </web-app>

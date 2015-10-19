@@ -36,42 +36,19 @@ public class TransferenciaCommand implements Command {
         String logMessage = "";
 
         try (PrintWriter out = response.getWriter()) {
-            sessionManager.transferir(remetente, destinatario, valorTransferencia);
-            logMessage = "Cliente " + remetente.getNroConta()
-                    + " transferiu " + nf.format(valorTransferencia)
-                    + " para a conta " + destinatario.getNroConta();
-            logProducer.log(logMessage);
+            if (sessionManager.transferir(remetente, destinatario, valorTransferencia)) {
+                logMessage = "Cliente " + remetente.getNroConta()
+                        + " transferiu " + nf.format(valorTransferencia)
+                        + " para a conta " + destinatario.getNroConta();
+                logProducer.log(logMessage);
+                out.print("<meta http-equiv=\"refresh\" content=0;url=\"transferencia.jsp?result=success\">");
+            } else {
+                out.print("<meta http-equiv=\"refresh\" content=0;url=\"transferencia.jsp?result=failure\">");
+            }
 
-            out.print("<script>alert('Transferencia efetuada com sucesso');</script>");
-            out.print("<meta http-equiv=\"refresh\" content=0;url=\"transferencia.jsp\">");
         } catch (IOException ex) {
             Logger.getLogger(TransferenciaCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
-        /*try (PrintWriter out = response.getWriter()) {
-         if (remetente.sacar(valorTransferencia)) {
-         destinatario.depositar(valorTransferencia);
-        
-         logMessage = "Cliente " + remetente.getNroConta()
-         + " transferiu " + nf.format(valorTransferencia)
-         + " para a conta " + destinatario.getNroConta();
-         logProducer.log(logMessage);
-        
-         out.print("<script>alert('Transferencia efetuada com sucesso');</script>");
-         out.print("<meta http-equiv=\"refresh\" content=0;url=\"transferencia.jsp\">");
-         } else {
-         logMessage = "Cliente " + remetente.getNroConta()
-         + " tentou transferir " + nf.format(valorTransferencia)
-         + " para a conta " + destinatario.getNroConta();
-         logProducer.log(logMessage);
-        
-         out.print("<script>alert('Saldo insuficiente!');</script>");
-         out.print("<meta http-equiv=\"refresh\" content=0;url=\"transferencia.jsp\">");
-         }
-        
-        
-         } catch (IOException ex) {
-         Logger.getLogger(TransferenciaCommand.class.getName()).log(Level.SEVERE, null, ex);
-         }*/
 
     }
 

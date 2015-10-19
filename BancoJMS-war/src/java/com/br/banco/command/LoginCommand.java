@@ -6,7 +6,6 @@ import com.br.banco.log.LogProducerLocal;
 import com.br.banco.sessionbeans.SessionManagerLocal;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Enumeration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.naming.Context;
@@ -21,6 +20,8 @@ import javax.servlet.http.HttpServletResponse;
  * @author bruce
  */
 public class LoginCommand implements Command {
+    
+    final int MINUTO = 60;
 
     LogProducerLocal logProducer = lookupLogProducerLocal();
     SessionManagerLocal sessionManager = lookupSessionManagerLocal();
@@ -77,6 +78,7 @@ public class LoginCommand implements Command {
 
             String logMessage = "Cliente " + clienteLogado.getNroConta() + " logado";
             logProducer.log(logMessage);
+            request.getSession().setMaxInactiveInterval(5 * MINUTO);
             try {
                 request.getRequestDispatcher("index.jsp").forward(request, response);
             } catch (ServletException | IOException ex) {

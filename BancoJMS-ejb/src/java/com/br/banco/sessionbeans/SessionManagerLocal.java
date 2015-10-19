@@ -14,5 +14,5 @@ public interface SessionManagerLocal {
     
     public boolean auth(int nroConta, String senha);
 
-    void transferir(Cliente origem, Cliente destino, int qtde);
+    boolean transferir(Cliente origem, Cliente destino, int qtde);
 }

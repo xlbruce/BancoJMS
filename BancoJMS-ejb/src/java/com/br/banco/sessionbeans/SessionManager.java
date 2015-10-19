@@ -33,13 +33,15 @@ public class SessionManager implements SessionManagerLocal {
     }
 
     @Override
-    public void transferir(Cliente origem, Cliente destino, int qtde) {
+    public boolean transferir(Cliente origem, Cliente destino, int qtde) {
         ClienteDAO dao = new ClienteDAO();        
         if(origem.sacar(qtde)) {
             destino.depositar(qtde);
             dao.update(origem);
             dao.update(destino);
-        }
+            return true;
+        } 
+        return false;
     }
 
     

@@ -10,9 +10,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Banco JMS</title>
+        <%@include file="include_bootstrap.html" %>
     </head>
     <body>
-        <h2>Saldo atual: ${clienteLogado.saldoFormatado}</h2>
-        <p><a href="index.jsp">Voltar</a></p>
+        <div class="container">
+            <div class="jumbotron">
+            <h2>Saldo atual: ${clienteLogado.saldoFormatado}</h2>
+            <button type="button" class="btn btn-default"><a href="index.jsp">Voltar</a></button>
+            </div>
+        </div>
     </body>
 </html>

@@ -12,15 +12,20 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Banco JMS</title>
+        <%@include file="include_bootstrap.html" %>
     </head>
     <body>        
-        <h1>Bem-vindo(a) ${clienteLogado.nome}</h1>
-        <h3>Selecione uma das opções abaixo</h3>
-        <ul>
-            <li><a href="FrontController?action=SaldoCommand">Saldo</a></li>
-            <li><a href="saque.jsp">Saque</a></li>
-            <li><a href="transferencia.jsp">Transferir</a></li>
-            <li><a href="FrontController?action=LogoffCommand">Logoff</a></li>
-        </ul>
+        <div class="container" role="group" aria-label="...">
+            <h1>Bem-vindo(a) ${clienteLogado.nome}</h1>
+            <div class="jumbotron">
+            <h3>Selecione uma das opções abaixo</h3>
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-default"><a href="FrontController?action=SaldoCommand">Saldo</a></button>
+                <button type="button" class="btn btn-default"><a href="saque.jsp">Saque</a></button>
+                <button type="button" class="btn btn-default"><a href="transferencia.jsp">Transferir</a></button>
+                <button type="button" class="btn btn-default"><a href="FrontController?action=LogoffCommand">Logoff</a></button>
+            </div>
+            </div>
+        </div>
     </body>
 </html>

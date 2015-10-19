@@ -28,19 +28,21 @@ public class SaqueCommand implements Command {
         int valorSaque = Integer.parseInt(request.getParameter("valor_saque"));
         try (PrintWriter out = response.getWriter()) {
             if (sessionManager.sacar(valorSaque, cliente)) {
-                out.print("<script>alert('Saque realizado com sucesso');</script>");
-
+                //out.print("<script>alert('Saque realizado com sucesso');</script>");
                 String logMessage = "Cliente " + cliente.getNroConta()
                         + " sacou R$" + valorSaque;
                 logProducer.log(logMessage);
+                out.print("<meta http-equiv=\"refresh\" content=0;url=\"saque.jsp?result=sacado\">");
             } else {
-                out.print("<script>alert('Saldo insuficiente!');</script>");
+                //out.print("<script>alert('Saldo insuficiente!');</script>");
+                request.getSession().setAttribute("sacado", false);                
+                request.setAttribute("saldo_insuficiente", true);
                 String logMessage = "Cliente " + cliente.getNroConta()
                         + " tentou sacar R$" + valorSaque;
                 logProducer.log(logMessage);
-            }
+                out.print("<meta http-equiv=\"refresh\" content=0;url=\"saque.jsp?result=saldo_insuficiente\">");
+            }            
             
-            out.print("<meta http-equiv=\"refresh\" content=0;url=\"saque.jsp\">");
         } catch (IOException ex) {
             System.err.println("IOException");
             System.err.println(ex.getMessage());

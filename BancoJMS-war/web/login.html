@@ -4,8 +4,13 @@
         <title>Bem-vindo(a) ao Banco JMS</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+        <script src="js/bootstrap.js"></script>
+
     </head>
     <body>
+        <!--
         <form action="FrontController" method="POST">
             <table>
                 <tr><td>Número da conta:</td><td><input type="number" name="nro_conta"/></td></tr>
@@ -13,6 +18,42 @@
             </table>
             <input type="hidden" name="command" value="LoginCommand"/>
             <input type="submit" value="Login"/>
-        </form>
+        </form>-->
+        <style>
+            form {
+                padding-top: 15%;
+            }
+        </style>
+        <div class="container">
+            <h1>Bem-vindo(a) ao Banco JMS</h1>
+            <form class="form-horizontal" action="FrontController" method="POST">
+                
+                <fieldset>
+                    <div class="form-group">                
+                        
+                        <label class="col-md-4 control-label" for="nro_conta"></label> 
+                        
+                        <div class="col-md-4">
+                            <input id="nro_conta" name="nro_conta" type="text" placeholder="Número da conta" class="form-control input-md" required="">
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="senha"></label>
+                        <div class="col-md-4">
+                            <input id="senha" name="senha" type="password" placeholder="Senha" class="form-control input-md" required="">
+                        </div>
+                    </div>
+                    <input type="hidden" name="command" value="LoginCommand"/>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="login"></label>
+                        <div class="col-md-4">
+                            <button id="login" name="login" class="btn btn-primary">Login</button>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
     </body>
 </html>

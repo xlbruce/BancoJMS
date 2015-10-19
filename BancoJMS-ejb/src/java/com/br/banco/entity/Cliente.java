@@ -2,7 +2,6 @@ package com.br.banco.entity;
 
 import java.io.Serializable;
 import java.text.NumberFormat;
-import java.text.ParseException;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,7 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.swing.text.NumberFormatter;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**

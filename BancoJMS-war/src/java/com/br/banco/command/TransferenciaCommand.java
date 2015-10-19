@@ -3,6 +3,7 @@ package com.br.banco.command;
 import com.br.banco.dao.ClienteDAO;
 import com.br.banco.entity.Cliente;
 import com.br.banco.log.LogProducerLocal;
+import com.br.banco.sessionbeans.SessionManagerLocal;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.NumberFormat;
@@ -20,6 +21,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class TransferenciaCommand implements Command {
 
+    SessionManagerLocal sessionManager = lookupSessionManagerLocal();
+
     LogProducerLocal logProducer = lookupLogProducerLocal();
 
     @Override
@@ -31,31 +34,44 @@ public class TransferenciaCommand implements Command {
         int valorTransferencia = Integer.parseInt(request.getParameter("valor_transferencia"));
         NumberFormat nf = NumberFormat.getCurrencyInstance();
         String logMessage = "";
+
         try (PrintWriter out = response.getWriter()) {
-            if (remetente.sacar(valorTransferencia)) {
-                destinatario.depositar(valorTransferencia);
+            sessionManager.transferir(remetente, destinatario, valorTransferencia);
+            logMessage = "Cliente " + remetente.getNroConta()
+                    + " transferiu " + nf.format(valorTransferencia)
+                    + " para a conta " + destinatario.getNroConta();
+            logProducer.log(logMessage);
 
-                logMessage = "Cliente " + remetente.getNroConta()
-                        + " transferiu " + nf.format(valorTransferencia)
-                        + " para a conta " + destinatario.getNroConta();
-                logProducer.log(logMessage);
-                
-                out.print("<script>alert('Transferencia efetuada com sucesso');</script>");
-                out.print("<meta http-equiv=\"refresh\" content=0;url=\"transferencia.jsp\">");
-            } else {
-                logMessage = "Cliente " + remetente.getNroConta()
-                        + " tentou transferir " + nf.format(valorTransferencia)
-                        + " para a conta " + destinatario.getNroConta();
-                logProducer.log(logMessage);
-                
-                out.print("<script>alert('Saldo insuficiente!');</script>");
-                out.print("<meta http-equiv=\"refresh\" content=0;url=\"transferencia.jsp\">");
-            }
-
-
+            out.print("<script>alert('Transferencia efetuada com sucesso');</script>");
+            out.print("<meta http-equiv=\"refresh\" content=0;url=\"transferencia.jsp\">");
         } catch (IOException ex) {
             Logger.getLogger(TransferenciaCommand.class.getName()).log(Level.SEVERE, null, ex);
         }
+        /*try (PrintWriter out = response.getWriter()) {
+         if (remetente.sacar(valorTransferencia)) {
+         destinatario.depositar(valorTransferencia);
+        
+         logMessage = "Cliente " + remetente.getNroConta()
+         + " transferiu " + nf.format(valorTransferencia)
+         + " para a conta " + destinatario.getNroConta();
+         logProducer.log(logMessage);
+        
+         out.print("<script>alert('Transferencia efetuada com sucesso');</script>");
+         out.print("<meta http-equiv=\"refresh\" content=0;url=\"transferencia.jsp\">");
+         } else {
+         logMessage = "Cliente " + remetente.getNroConta()
+         + " tentou transferir " + nf.format(valorTransferencia)
+         + " para a conta " + destinatario.getNroConta();
+         logProducer.log(logMessage);
+        
+         out.print("<script>alert('Saldo insuficiente!');</script>");
+         out.print("<meta http-equiv=\"refresh\" content=0;url=\"transferencia.jsp\">");
+         }
+        
+        
+         } catch (IOException ex) {
+         Logger.getLogger(TransferenciaCommand.class.getName()).log(Level.SEVERE, null, ex);
+         }*/
 
     }
 
@@ -63,6 +79,16 @@ public class TransferenciaCommand implements Command {
         try {
             Context c = new InitialContext();
             return (LogProducerLocal) c.lookup("java:global/BancoJMS/BancoJMS-ejb/LogProducer!com.br.banco.log.LogProducerLocal");
+        } catch (NamingException ne) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", ne);
+            throw new RuntimeException(ne);
+        }
+    }
+
+    private SessionManagerLocal lookupSessionManagerLocal() {
+        try {
+            Context c = new InitialContext();
+            return (SessionManagerLocal) c.lookup("java:global/BancoJMS/BancoJMS-ejb/SessionManager!com.br.banco.sessionbeans.SessionManagerLocal");
         } catch (NamingException ne) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", ne);
             throw new RuntimeException(ne);

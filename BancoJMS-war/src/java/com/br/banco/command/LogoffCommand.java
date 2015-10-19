@@ -21,13 +21,11 @@ public class LogoffCommand implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) {
-        System.out.println("cheguei na classe logoffcommand");
         Cliente cliente = (Cliente) request.getSession().getAttribute("clienteLogado");
         String logMessage = "Cliente " + cliente.getNroConta() +
                 " fez logoff";
         logProducer.log(logMessage);
         request.getSession().invalidate();
-        System.out.println("passei aqui");
         try {
             request.getRequestDispatcher("login.html").forward(request, response);
         } catch (ServletException | IOException ex) {

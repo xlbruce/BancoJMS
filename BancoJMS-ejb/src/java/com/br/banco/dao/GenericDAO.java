@@ -10,6 +10,8 @@ public interface GenericDAO <T> {
     
     public void insert (T t);
     
+    public void update (T t);
+    
     /**
      * Leitura a partir de uma chave primária
      * @param id

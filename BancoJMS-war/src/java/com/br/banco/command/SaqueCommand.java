@@ -2,6 +2,7 @@ package com.br.banco.command;
 
 import com.br.banco.entity.Cliente;
 import com.br.banco.log.LogProducerLocal;
+import com.br.banco.sessionbeans.SessionManagerLocal;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author bruce
  */
 public class SaqueCommand implements Command {
+    SessionManagerLocal sessionManager = lookupSessionManagerLocal();
 
     LogProducerLocal logProducer = lookupLogProducerLocal();
 
@@ -25,7 +27,7 @@ public class SaqueCommand implements Command {
         Cliente cliente = (Cliente) request.getSession().getAttribute("clienteLogado");
         int valorSaque = Integer.parseInt(request.getParameter("valor_saque"));
         try (PrintWriter out = response.getWriter()) {
-            if (cliente.sacar(valorSaque)) {
+            if (sessionManager.sacar(valorSaque, cliente)) {
                 out.print("<script>alert('Saque realizado com sucesso');</script>");
 
                 String logMessage = "Cliente " + cliente.getNroConta()
@@ -50,6 +52,16 @@ public class SaqueCommand implements Command {
         try {
             Context c = new InitialContext();
             return (LogProducerLocal) c.lookup("java:global/BancoJMS/BancoJMS-ejb/LogProducer!com.br.banco.log.LogProducerLocal");
+        } catch (NamingException ne) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", ne);
+            throw new RuntimeException(ne);
+        }
+    }
+
+    private SessionManagerLocal lookupSessionManagerLocal() {
+        try {
+            Context c = new InitialContext();
+            return (SessionManagerLocal) c.lookup("java:global/BancoJMS/BancoJMS-ejb/SessionManager!com.br.banco.sessionbeans.SessionManagerLocal");
         } catch (NamingException ne) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", ne);
             throw new RuntimeException(ne);

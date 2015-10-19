@@ -123,3 +123,80 @@
 [13/10/2015 22:55:52] Cliente 1010 consultou o saldo
 [13/10/2015 22:59:03] Cliente 1010 consultou o saldo
 [13/10/2015 22:59:09] Cliente 1010 tentou transferir R$ 1.000,00 para a conta1011
+[13/10/2015 23:08:01] Cliente 1010 logado
+[13/10/2015 23:08:09] Cliente 1010 consultou o saldo
+[13/10/2015 23:09:51] Cliente 1010 fez logoff
+[13/10/2015 23:11:18] Cliente 1011 logado
+[13/10/2015 23:11:22] Cliente 1011 consultou o saldo
+[13/10/2015 23:11:35] Cliente 1011 transferiu R$ 2.000,00 para a conta 1010
+[13/10/2015 23:11:38] Cliente 1011 consultou o saldo
+[13/10/2015 23:11:41] Cliente 1011 fez logoff
+[13/10/2015 23:11:47] Cliente 1010 logado
+[13/10/2015 23:11:48] Cliente 1010 consultou o saldo
+[13/10/2015 23:12:09] Cliente 1011 logado
+[13/10/2015 23:12:10] Cliente 1011 consultou o saldo
+[13/10/2015 23:17:51] Cliente 1011 fez logoff
+[13/10/2015 23:18:14] Cliente 1010 logado
+[13/10/2015 23:18:17] Cliente 1010 consultou o saldo
+[13/10/2015 23:18:25] Cliente 1010 sacou R$100
+[13/10/2015 23:18:28] Cliente 1010 consultou o saldo
+[13/10/2015 23:18:31] Cliente 1010 logado
+[13/10/2015 23:18:32] Cliente 1010 consultou o saldo
+[13/10/2015 23:19:40] Cliente 1010 fez logoff
+[13/10/2015 23:21:49] Cliente 1010 logado
+[13/10/2015 23:22:02] Cliente 1010 consultou o saldo
+[13/10/2015 23:22:06] Cliente 1010 fez logoff
+[13/10/2015 23:22:07] Cliente 1010 logado
+[13/10/2015 23:22:11] Cliente 1010 sacou R$100
+[13/10/2015 23:22:13] Cliente 1010 consultou o saldo
+[13/10/2015 23:22:21] Cliente 1010 logado
+[13/10/2015 23:22:22] Cliente 1010 consultou o saldo
+[13/10/2015 23:22:27] Cliente 1010 sacou R$100
+[13/10/2015 23:22:30] Cliente 1010 consultou o saldo
+[13/10/2015 23:23:50] Cliente 1010 logado
+[13/10/2015 23:23:51] Cliente 1010 consultou o saldo
+[13/10/2015 23:23:57] Cliente 1010 sacou R$1000
+[13/10/2015 23:23:59] Cliente 1010 consultou o saldo
+[13/10/2015 23:24:01] Cliente 1010 fez logoff
+[13/10/2015 23:24:02] Cliente 1010 logado
+[13/10/2015 23:24:03] Cliente 1010 consultou o saldo
+[13/10/2015 23:29:20] Cliente 1010 logado
+[13/10/2015 23:29:24] Cliente 1010 consultou o saldo
+[13/10/2015 23:29:31] Cliente 1010 sacou R$100
+[13/10/2015 23:29:33] Cliente 1010 consultou o saldo
+[13/10/2015 23:29:35] Cliente 1010 fez logoff
+[13/10/2015 23:29:37] Cliente 1010 logado
+[13/10/2015 23:29:38] Cliente 1010 consultou o saldo
+[18/10/2015 22:53:35] Cliente 1010 logado
+[18/10/2015 22:53:38] Cliente 1010 consultou o saldo
+[18/10/2015 22:53:44] Cliente 1010 sacou R$100
+[18/10/2015 22:53:48] Cliente 1010 consultou o saldo
+[18/10/2015 22:53:50] Cliente 1010 fez logoff
+[18/10/2015 22:53:51] Cliente 1010 logado
+[18/10/2015 22:53:52] Cliente 1010 consultou o saldo
+[18/10/2015 22:54:02] Cliente 1010 transferiu R$ 100,00 para a conta 1011
+[18/10/2015 22:54:06] Cliente 1010 consultou o saldo
+[18/10/2015 22:54:07] Cliente 1010 fez logoff
+[18/10/2015 22:54:08] Cliente 1010 logado
+[18/10/2015 22:54:09] Cliente 1010 consultou o saldo
+[18/10/2015 22:58:04] Cliente 1010 fez logoff
+[18/10/2015 22:58:13] Cliente 1010 logado
+[18/10/2015 22:58:15] Cliente 1010 consultou o saldo
+[18/10/2015 22:58:22] Cliente 1010 transferiu R$ 100,00 para a conta 1011
+[18/10/2015 22:58:24] Cliente 1010 consultou o saldo
+[18/10/2015 22:58:27] Cliente 1010 logado
+[18/10/2015 22:58:27] Cliente 1010 consultou o saldo
+[18/10/2015 23:03:33] Cliente 1010 consultou o saldo
+[18/10/2015 23:03:40] Cliente 1010 transferiu R$ 100,00 para a conta 1011
+[18/10/2015 23:03:44] Cliente 1010 consultou o saldo
+[18/10/2015 23:03:45] Cliente 1010 fez logoff
+[18/10/2015 23:03:46] Cliente 1010 logado
+[18/10/2015 23:03:47] Cliente 1010 consultou o saldo
+[18/10/2015 23:04:17] Tentativa de login com a conta 1011
+[18/10/2015 23:04:49] Cliente 1011 logado
+[18/10/2015 23:04:50] Cliente 1011 consultou o saldo
+[18/10/2015 23:04:59] Cliente 1011 transferiu R$ 10.000,00 para a conta 1010
+[18/10/2015 23:05:02] Cliente 1011 consultou o saldo
+[18/10/2015 23:05:04] Cliente 1011 fez logoff
+[18/10/2015 23:05:06] Cliente 1010 logado
+[18/10/2015 23:05:06] Cliente 1010 consultou o saldo
